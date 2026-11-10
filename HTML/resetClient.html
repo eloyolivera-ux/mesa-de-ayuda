@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--------------------------------------------------------------------------------------------------------------------------->
+<!-- resetClient.html                                                                                                      -->
+<!-- Taller de maquetado - aplicación ejemplo Mesa de Ayuda                                                                -->
+<!-- Dr. Pedro E. Colla                                                                                                    -->
+<!-- UADER - Ingeniería de Software I                                                                                      -->
+<!--------------------------------------------------------------------------------------------------------------------------->
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Cambiar Contraseña</title>
+
+        <style type="text/css">
+            label {
+                font-size: 18px;
+            }
+            form {
+                width: 500px;
+                border: 1px solid black;
+            }
+            table {
+                text-align: left;
+            }
+            input {
+                margin: 7px;
+                padding: 2px;
+            }
+            .form-label {
+                margin-bottom: 0 !important;
+            }
+            .txt {
+                display: inline-block;
+                width: 80%;
+                outline: none;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <center><img src="HelpDeskGirl.png" alt="Nuestra imagen corporativa" style="width:200px;height:150px;"></center>
+        <center>
+            <h1>Sistema de Mesa de Ayuda</h1>
+            <h2>Cambiar Contraseña</h2>
+        </center>
+
+        <center>
+            <form class="form" novalidate style="background-color:#d8f7cf" width="100px" border="1">
+                <br>
+                <table>
+                    <tr style="height:10px;">
+                        <td><label for="emailCliente" class="form-label">E-Mail</label></td>
+                    </tr>
+                    <tr style="height:10px;">
+                        <td><input class="txt" id="emailCliente" name="contacto" type="email" placeholder="Correo electrónico del cliente" autocomplete="email" required><br></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr style="height:10px;">
+                        <td><label for="NewPassword" class="form-label">Nueva Contraseña</label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="txt" id="NewPassword" name="NewPassword" type="password" placeholder="Nueva Contraseña" autocomplete="new-password" required><br></td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr style="height:10px;">
+                        <td><label for="ConfirmarPassword" class="form-label">Confirmar Contraseña</label></td>
+                    </tr>
+                    <tr>
+                        <td><input class="txt" id="ConfirmarPassword" name="ConfirmarPassword" type="password" placeholder="Confirmar Contraseña" autocomplete="new-password" required><br></td>
+                    </tr>
+                    <tr><td><span id="errorPassword"></span></td></tr>
+                    <tr>
+                        <td><br><input id="termscondition" name="termscondition" type="checkbox"> Acepto los términos y condiciones del ingreso al sistema (S.E.u.O)</td>
+                    </tr>
+                    <tr><td><span id="resultado2"></span></td></tr>
+                </table>
+
+                <button type="submit" id="btnregistrar">Confirmar</button>
+                <button type="button" id="btnVolver" hidden>Volver al inicio</button>
+                <p> </p>
+            </form>
+            <p>¡Todo lo que Ud. diga o haga en éste sistema podrá ser usado en su contra!</p>
+        </center>
+
+        <div id="app"></div>
+        <script src="resetclient.js" type="module"></script>
+    </body>
+</html>
